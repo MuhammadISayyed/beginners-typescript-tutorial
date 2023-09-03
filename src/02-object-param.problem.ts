@@ -1,6 +1,17 @@
+import { type } from "os";
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params: { first: number; second: number }) => {
+// We can create a type
+// type AddTwoNumbersArgs = {first: number; Second: number}
+
+// Also we can use an interface
+// Interface is almost exclusively used with objects.
+interface AddTwoNumbersArgs {
+  first: number;
+  second: number;
+}
+
+export const addTwoNumbers = (params: AddTwoNumbersArgs) => {
   return params.first + params.second;
 };
 
